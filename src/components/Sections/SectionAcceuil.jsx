@@ -5,7 +5,7 @@ export function SectionAcceuil() {
     <Section className="mt-24 lg:mt-[100px]">
       <div className="relative">
         <img
-          src="../public/images/reunion.jpg"
+          src="/images/reunion.jpg"
           alt="Groupe d'affaires"
           className="w-full object-cover opacity-70 h-[300px] sm:h-[400px] md:h-[500px] lg:h-[755px] rounded-[20px] sm:rounded-[30px]"
         />
