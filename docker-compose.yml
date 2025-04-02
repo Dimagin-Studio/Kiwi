@@ -1,6 +1,8 @@
 services:
   kiwi-frontend:
     image: dimagin/kiwi-frontend:latest
+    environment:
+      - .env
     networks:
       - traefik-network
     labels:
