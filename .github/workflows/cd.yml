@@ -18,7 +18,7 @@ jobs:
           password: ${{ secrets.SSH_PASSWORD }}
           script: |
             cd kiwi-frontend
-            curl -o docker-compose.yml https://raw.githubusercontent.com/${{ github.repository_owner }}/${{ github.event.repository.name }}/main/docker-compose.yml
+            curl -H 'Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' -o docker-compose.yml https://raw.githubusercontent.com/${{ github.repository_owner }}/${{ github.event.repository.name }}/main/docker-compose.yml
 
       - name: Run the docker container
         uses: appleboy/ssh-action@master

@@ -5,7 +5,7 @@ services:
       - traefik-network
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.kiwi-frontend.rule=Host(`kiwi.dimagin.studio`)"
+      - "traefik.http.routers.kiwi-frontend.rule=Host(`kiwiclub.be`)"
       - "traefik.http.routers.kiwi-frontend.entrypoints=websecure"
       - "traefik.http.routers.kiwi-frontend.tls=true"
       - "traefik.http.routers.kiwi-frontend.tls.certresolver=letsencrypt"
