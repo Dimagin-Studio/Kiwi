@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getUpcomingEvents } from "../../../services/directusService";
 import { Button } from "../Buttons/Button";
 
-// const API_URL = "http://localhost:8055";
+const API_URL = "http://localhost:8055";
 export function CardSmall() {
 	const [event, setEvent] = useState(null);
 
@@ -21,7 +21,7 @@ export function CardSmall() {
 	return (
 		<div className="relative overflow-hidden rounded-3xl w-full lg:w-1/3 h-[550px] group">
 			<img
-				src={`${process.env.API_URL}/assets/${event.image}`}
+				src={`${API_URL}/assets/${event.image}`}
 				alt={event.title}
 				className="absolute inset-0 w-full h-full object-cover transition-all duration-500 group-hover:blur-none opacity-50 group-hover:opacity-100"
 			/>

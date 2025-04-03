@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getUpcomingEvents } from "../../../services/directusService";
 import { Button } from "../Buttons/Button";
 
-// const API_URL = "http://localhost:8055";
+const API_URL = "http://localhost:8055";
 
 export function CardLong() {
 	const [event, setEvent] = useState(null);
@@ -22,7 +22,7 @@ export function CardLong() {
 	return (
 		<div className="relative overflow-hidden rounded-3xl w-full lg:w-2/3 h-[550px] group">
 			<img
-				src={`${process.env.API_URL}/assets/${event.image}`}
+				src={`${API_URL}/assets/${event.image}`}
 				alt={event.title}
 				className="absolute inset-0 w-full h-full object-cover transition-all duration-500 opacity-50"
 			/>
