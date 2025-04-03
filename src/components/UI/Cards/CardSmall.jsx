@@ -4,6 +4,9 @@ import { Button } from "../Buttons/Button";
 
 export function CardSmall() {
   const [event, setEvent] = useState(null);
+  const API_BASE_URL = import.meta.env.PROD
+    ? "https://kiwi-directus.dimagin.be"
+    : "/api";
 
   useEffect(() => {
     async function fetchEvents() {
@@ -20,7 +23,7 @@ export function CardSmall() {
   return (
     <div className="relative overflow-hidden rounded-3xl w-full lg:w-1/3 h-[550px] group">
       <img
-        src={`/api/assets/${event.image}`}
+        src={`${API_BASE_URL}/assets/${event.image}`}
         alt={event.title}
         className="absolute inset-0 w-full h-full object-cover transition-all duration-500 group-hover:blur-none opacity-50 group-hover:opacity-100"
       />

@@ -3,6 +3,9 @@ import { getUpcomingEvents } from "../../../services/directusService";
 import { Button } from "../Buttons/Button";
 
 export function CardLong() {
+  const API_BASE_URL = import.meta.env.PROD
+    ? "https://kiwi-directus.dimagin.be"
+    : "/api";
   const [event, setEvent] = useState(null);
 
   useEffect(() => {
@@ -20,7 +23,7 @@ export function CardLong() {
   return (
     <div className="relative overflow-hidden rounded-3xl w-full lg:w-2/3 h-[550px] group">
       <img
-        src={`/api/assets/${event.image}`}
+        src={`${API_BASE_URL}/assets/${event.image}`}
         alt={event.title}
         className="absolute inset-0 w-full h-full object-cover transition-all duration-500 opacity-50"
       />
